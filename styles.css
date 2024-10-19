@@ -280,18 +280,14 @@ input:checked + .slider:before {
   position: relative;
   width: 100%;
   max-width: 100%;
-  /* margin: auto; */
   overflow: hidden;
   border-radius: 10px;
 }
 
 .slides {
   display: flex;
-  /* overflow: hidden; */
-  position: relative;
-
   transition: transform 0.5s ease-in-out;
-  width: 50vh;
+  width: 100%; /* Remove fixed width */
 }
 
 .slide {
@@ -299,25 +295,24 @@ input:checked + .slider:before {
   position: relative;
 }
 
-/* img {
-  width: 100%;
+.carousel img {
+  width: 100%; /* Ensure images take up full width */
   border-radius: 10px;
-} */
-
-/* .text {
+}
+.text {
   position: absolute;
   bottom: 20px;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   color: white;
   padding: 10px;
-  font-size: 18px;
-  text-align: center;
+  font-size: 12px;
+  /* text-align: center; */
   width: 90%;
   border-radius: 5px;
-} */
-
+  line-height: 16px;
+}
 .prev,
 .next {
   position: absolute;
@@ -325,7 +320,6 @@ input:checked + .slider:before {
   transform: translateY(-50%);
   background-color: #fff;
   color: #334155;
-  /* font-size: px; */
   padding: 16px;
   cursor: pointer;
   border: none;
