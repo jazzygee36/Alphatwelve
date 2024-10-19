@@ -282,7 +282,7 @@ input:checked + .slider:before {
   max-width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  height: 320px;
+  /* height: 320px; */
 }
 
 .slides {
@@ -302,8 +302,8 @@ input:checked + .slider:before {
 }
 .text {
   position: absolute;
-  bottom: 180px; /*responsiveness measurement*/
-  left: 45%;
+  bottom: 5px;
+  left: 46%;
   transform: translateX(-50%);
   /* background-color: rgba(0, 0, 0, 0.5); */
   color: white;
