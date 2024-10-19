@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="top-logo">
+            <h5>Full Logo</h5>
+          </div>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <img src="./assets/sidebarIcons/home.svg" alt="home" class="img" />
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <img src="./assets/sidebarIcons/event.svg" alt="event" />
+
+            <a href="#">Events</a>
+          </li>
+          <li>
+            <img src="./assets/sidebarIcons/speaker.svg" alt="speaker" />
+
+            <a href="#">Skeakers</a>
+          </li>
+          <li>
+            <img src="./assets/sidebarIcons/report.svg" alt="report" />
+
+            <a href="#">Reports</a>
+          </li>
+          <li>
+            <div class="notification-icon">
+              <div class="notify">
+                <img src="./assets/sidebarIcons/bell.svg" alt="notify" />
+                <a href="#">Notifications</a>
+              </div>
+              <div class="message-count">
+                <span class="count">3</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/sidebarIcons/chat.svg" alt="message" />
+
+            <a href="#">Messages</a>
+          </li>
+          <li>
+            <img src="./assets/sidebarIcons/settings.svg" alt="settings" />
+
+            <a href="#">Settings</a>
+          </li>
+          <li>
+            <img src="./assets/sidebarIcons/chevronLeft.svg" alt="collapse" />
+
+            <a href="#">Collapse</a>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+            <a href="#">Dark mode</a>
+          </li>
+          <li><a href="#">Rura davis</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main content -->
+      <div class="main-content">
+        <!-- Header -->
+        <header class="header header-bottom">
+          <div class="main-top-logo top-logo">
+            <h5>Full Logo</h5>
+          </div>
+          <h1>Welcome! here’s your summary</h1>
+
+          <div>
+            <img
+              src="./assets/mainContentIcons/toggle.svg"
+              alt="toggle"
+              class="menu-toggle"
+              id="menu-toggle"
+            />
+          </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="content-top-header">
+          <h1>Welcome! here’s your summary</h1>
+        </div>
+        <div class="box-container">
+          <div class="reusable-box">
+            <div class="title-container">
+              <h4 class="box-title">Total Events</h4>
+              <img src="./assets/mainContentIcons/information.svg" alt="" />
+            </div>
+            <div class="title-container">
+              <h4 class="box-count">100,000</h4>
+              <img src="./assets/mainContentIcons/arrowup.svg" alt="" />
+            </div>
+          </div>
+          <div class="reusable-box">
+            <div class="title-container">
+              <h4 class="box-title">Active Speakers</h4>
+              <img src="./assets/mainContentIcons/information.svg" alt="" />
+            </div>
+            <div class="title-container">
+              <h4 class="box-count">25</h4>
+              <img src="./assets/mainContentIcons/arrowup.svg" alt="" />
+            </div>
+          </div>
+          <div class="reusable-box">
+            <div class="title-container">
+              <h4 class="box-title">Total Registrations</h4>
+              <img src="./assets/mainContentIcons/information.svg" alt="info" />
+            </div>
+            <div class="title-container">
+              <h4 class="box-count">300,000</h4>
+              <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
+            </div>
+          </div>
+          <div class="reusable-box">
+            <div class="title-container">
+              <h4 class="box-title">Total Revenue</h4>
+              <img src="./assets/mainContentIcons/information.svg" alt="info" />
+            </div>
+            <div class="title-container">
+              <h4 class="box-count">$500,000</h4>
+              <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
+            </div>
+          </div>
+        </div>
+        <section class="event-registration">
+          <h3>Event Registrations per month</h3>
+
+          <!-- <div>
+            <div class="carousel-container">
+              <div class="carousel">
+                <div class="slide active">
+                  Slide 1: Welcome to the carousel!
+                </div>
+                <div class="slide">Slide 2: This is the second slide.</div>
+                <div class="slide">Slide 3: Enjoy your experience!</div>
+                <div class="slide">Slide 4: Thank you for visiting.</div>
+              </div>
+              <button class="prev" onclick="prevSlide()">&#10094;</button>
+              <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+          </div> -->
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

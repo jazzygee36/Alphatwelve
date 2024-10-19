@@ -1,0 +1,394 @@
+/* General resets */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  color: #334155;
+  position: fixed;
+  height: 100%;
+  transition: transform 0.3s ease;
+  border-right: 1px solid #f1f5f9;
+  z-index: 10;
+  background-color: #ffffff;
+  padding-top: 16px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+}
+.top-logo {
+  width: 64px;
+  height: 32px;
+  gap: 0px;
+  /* border: 1px 0px 0px 0px; */
+  opacity: 0px;
+  border: 1px solid #2563eb;
+  text-align: center;
+  font-size: 12px;
+  color: #2563eb;
+  background-color: #93c5fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  /* margin: 16px 0px 0px 16px; */
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin-top: 24px;
+  padding: 0px 8px 8px 8px;
+}
+
+.sidebar-menu li {
+  margin: 24px 0;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  /* justify-content: flex; */
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  padding-left: 8px;
+}
+.sidebar-menu li:hover {
+  gap: 16px;
+  border-radius: 2px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #fcf7ff;
+
+  height: 36px;
+}
+
+.sidebar-menu li:hover a {
+  color: #8576ff;
+}
+
+.sidebar-menu li:hover img {
+  color: #8576ff;
+}
+.sidebar-menu a {
+  color: #334155;
+  text-decoration: none;
+}
+
+.notification-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+.notify {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.message-count {
+  background-color: #f43f5e;
+  border-radius: 100%;
+  /* padding: 8px; */
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+}
+
+/* Hide the default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* The circle inside the slider */
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 12px;
+  left: 1px;
+  /* right: 2px; */
+  /* bottom: 4px; */
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When the switch is checked */
+input:checked + .slider {
+  background-color: #93c5fd;
+}
+
+/* Move the circle to the right when checked */
+input:checked + .slider:before {
+  transform: translateX(10px);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.main-content {
+  margin-left: 245px;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.header {
+  /* background-color: #f4f4f4; */
+  /* padding: 10px 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-bottom {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+.header h1 {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 400;
+}
+.content-top-header h1 {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 20px;
+}
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+.reusable-box {
+  width: 100%;
+  border: 1px solid #f2f2f7;
+  padding: 16px 16px 16px 16px;
+  margin-top: 24px;
+  line-height: 24px;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 7.17px;
+}
+.box-title {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  color: #64748b;
+}
+.box-count {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.event-registration h3 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 12px;
+  margin-top: 34px;
+  margin-bottom: 14px;
+}
+/* Carousel container */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Carousel slides */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 60px;
+  text-align: center;
+  font-size: 24px;
+  background-color: #fff;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Previous and Next buttons */
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+  .main-top-logo {
+    display: none;
+  }
+  .content-top-header {
+    display: none;
+  }
+  .header-bottom {
+    border-bottom: none;
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-menu a {
+    display: none;
+  }
+  .sidebar {
+    width: 64px;
+  }
+
+  .sidebar-menu {
+    padding: 0px 16px 8px 8px;
+  }
+  .message-count {
+    width: 6px;
+    height: 6px;
+    color: red;
+    position: relative;
+  }
+  .count {
+    display: none;
+  }
+  .notification-icon {
+    gap: 1px;
+    align-items: normal;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1px;
+  }
+  .header h1 {
+    display: none;
+  }
+  .sidebar-header {
+    display: none;
+  }
+}
