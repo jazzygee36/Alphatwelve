@@ -6,6 +6,8 @@ let currentSlide = 0;
 const slides = document.querySelector('.slides');
 const totalSlides = document.querySelectorAll('.slide').length;
 const ctx = document.getElementById('myBarChart').getContext('2d');
+const totalPages = 3; // Total number of pages
+let currentPage = 1;
 
 // Select the next and previous buttons
 const nextButton = document.querySelector('.next');
@@ -136,3 +138,45 @@ const myBarChart = new Chart(ctx, {
     },
   },
 });
+
+function createPagination() {
+  const pageNumbers = document.getElementById('pageNumbers');
+  pageNumbers.innerHTML = '';
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageButton = document.createElement('button');
+    pageButton.textContent = i;
+    pageButton.classList.add('page-btn');
+
+    if (i === currentPage) {
+      pageButton.classList.add('active');
+    }
+
+    pageButton.addEventListener('click', () => {
+      currentPage = i;
+      updatePagination();
+    });
+
+    pageNumbers.appendChild(pageButton);
+  }
+}
+
+function updatePagination() {
+  createPagination();
+}
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--;
+    updatePagination();
+  }
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  if (currentPage < totalPages) {
+    currentPage++;
+    updatePagination();
+  }
+});
+
+updatePagination();
