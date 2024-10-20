@@ -93,6 +93,11 @@ const myBarChart = new Chart(ctx, {
         },
         ticks: {
           autoSkip: false, // Ensures that all X-axis labels are shown
+          color: '#64748B',
+          font: {
+            size: 10, // Change the font size of the X-axis labels
+            weight: 400, // Make the X-axis labels bold
+          },
         },
       },
       y: {
@@ -101,6 +106,11 @@ const myBarChart = new Chart(ctx, {
           display: false, // Remove grid lines from the X-axis
         },
         ticks: {
+          color: '#64748B',
+          font: {
+            size: 10, // Change the font size of the X-axis labels
+            weight: 400, // Make the X-axis labels bold
+          },
           // Define the specific values you want to show on the Y-axis
           callback: function (value) {
             // Only display these specific Y-axis values (for example: 0, 500, 1000)
