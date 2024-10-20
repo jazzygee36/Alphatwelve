@@ -5,6 +5,7 @@ const sidebar = document.getElementById('sidebar');
 let currentSlide = 0;
 const slides = document.querySelector('.slides');
 const totalSlides = document.querySelectorAll('.slide').length;
+const ctx = document.getElementById('myBarChart').getContext('2d');
 
 // Select the next and previous buttons
 const nextButton = document.querySelector('.next');
@@ -50,3 +51,78 @@ function prevSlide() {
 setInterval(() => {
   nextSlide();
 }, 3000); // Slide every 3 seconds
+
+const myBarChart = new Chart(ctx, {
+  type: 'bar', // Define the chart type as 'bar'
+  data: {
+    labels: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ], // X-axis labels
+    datasets: [
+      {
+        data: [700, 900, 750, 400, 1000, 750, 900, 350, 850, 650, 900, 600],
+        backgroundColor: ' #8576FF',
+        // borderColor: [
+        //   'rgba(255, 99, 132, 1)',
+        //   'rgba(54, 162, 235, 1)',
+        //   'rgba(255, 206, 86, 1)',
+        //   'rgba(75, 192, 192, 1)',
+        //   'rgba(153, 102, 255, 1)',
+        //   'rgba(255, 159, 64, 1)',
+        // ],
+        // borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    scales: {
+      x: {
+        grid: {
+          display: false, // Remove grid lines from the X-axis
+        },
+        ticks: {
+          autoSkip: false, // Ensures that all X-axis labels are shown
+        },
+      },
+      y: {
+        beginAtZero: true, // Ensures the Y-axis starts at 0
+        grid: {
+          display: false, // Remove grid lines from the X-axis
+        },
+        ticks: {
+          // Define the specific values you want to show on the Y-axis
+          callback: function (value) {
+            // Only display these specific Y-axis values (for example: 0, 500, 1000)
+            if (
+              value === 0 ||
+              value === 200 ||
+              value === 400 ||
+              value === 600 ||
+              value === 800 ||
+              value === 1000
+            ) {
+              return value;
+            }
+            return null; // Hide other values
+          },
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false, // Hides the label (legend) from being displayed
+      },
+    },
+  },
+});

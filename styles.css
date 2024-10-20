@@ -221,23 +221,42 @@ input:checked + .slider:before {
 .content {
   margin-top: 20px;
 }
-.box-container {
+.overview-container {
   display: flex;
   justify-content: space-between;
   gap: 12px;
   width: 100%;
 }
-.reusable-box {
+.overview-card {
   width: 100%;
   border: 1px solid #f2f2f7;
   padding: 16px 16px 16px 16px;
   margin-top: 24px;
   line-height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* overflow: hidden;
+  position: relative; */
 }
 .title-container {
   display: flex;
   align-items: center;
   gap: 7.17px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.overview-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* .card:hover .card-btn {
+  background-color: #0056b3;
+} */
+
+.overview-card:hover .title-container {
+  opacity: 0.9;
 }
 .title-container h6 {
   font-family: Inter;
@@ -275,10 +294,17 @@ input:checked + .slider:before {
   align-items: center;
   gap: 12px;
 }
-.barchart {
+
+.chart-container {
   width: 100%;
-  height: 320px;
-  background-color: gray;
+  height: 100%;
+  /* height: 320px; */
+
+  padding: 30px 30px 30px 30px;
+  gap: 8px;
+  border-radius: 5px;
+  border: 1px solid #f2f2f7;
+  opacity: 0px;
 }
 
 .carousel {
@@ -287,7 +313,8 @@ input:checked + .slider:before {
   max-width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  height: 320px;
+  /* height: 320px; */
+  height: 100%;
 }
 
 .slides {
@@ -486,7 +513,7 @@ input:checked + .slider:before {
     align-items: normal;
   }
 
-  .box-container {
+  .overview-container {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -497,7 +524,7 @@ input:checked + .slider:before {
   .sidebar-header {
     display: none;
   }
-  .reusable-box {
+  .overview-card {
     margin-top: 12px;
   }
   .events h3 {
