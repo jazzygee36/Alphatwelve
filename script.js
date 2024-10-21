@@ -139,6 +139,8 @@ const myBarChart = new Chart(ctx, {
   },
 });
 
+//
+
 function createPagination() {
   const pageNumbers = document.getElementById('pageNumbers');
   pageNumbers.innerHTML = '';

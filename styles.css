@@ -387,7 +387,7 @@ input:checked + .slider:before {
 }
 .search-container {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .search-container img {
@@ -400,8 +400,8 @@ input:checked + .slider:before {
 }
 
 .search-container input {
-  width: 100%;
-  padding: 11px 11px 11px 35px; /* Add padding to the left for the icon */
+  width: 200px;
+  padding: 9px 9px 9px 35px; /* Add padding to the left for the icon */
   font-size: 14px;
   border: 1px solid #e2e8f0;
   border-radius: 4px;
@@ -411,16 +411,17 @@ input:checked + .slider:before {
 .search-container input::placeholder {
   color: #999;
 }
-.events-history-data h3 {
+.display-result {
   font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   color: #334155;
+
+  text-align: left;
 }
 .history-data {
-  width: 100%;
   height: 36px;
-  padding: 8px 0px 0px 0px;
+  padding: 8px 16px;
   gap: 8px;
   border-radius: 2px 0px 0px 0px;
   border: 1px solid #e2e8f0;
@@ -429,26 +430,44 @@ input:checked + .slider:before {
 .history-data .data {
   color: #334155;
 }
+.status {
+  width: 99px;
+}
+.name {
+  width: 95px;
+}
 .input-events {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 8px;
   align-items: center;
-  width: 60%;
+  width: 100%;
 }
 .recent {
   display: flex;
   justify-content: space-between;
   gap: 8px;
   align-items: center;
-  width: 10%;
+  /* width: 10%; */
 }
 .sort {
   display: flex;
   justify-content: space-between;
   gap: 8px;
   align-items: center;
-  width: 40%;
+  /* width: 40%; */
+}
+
+.sort h4 {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.ecclipse-export {
+  display: flex;
+  gap: 8px;
 }
 
 .pagination-count {
@@ -522,6 +541,17 @@ input:checked + .slider:before {
   border: 1px solid #e2e8f0;
   opacity: 0px;
 }
+.ecclipse {
+  width: 36px;
+  height: 36px;
+  padding: 8px 8px 8px 8px;
+  gap: 8px;
+  border-radius: 2px;
+  border: 1px solid #e2e8f0;
+  opacity: 0px;
+  cursor: pointer;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .sidebar {
@@ -633,6 +663,12 @@ input:checked + .slider:before {
   .events-history-data h3 {
     text-align: left;
   }
+  .search-container input {
+    width: 100%;
+  }
+  .history-data {
+    width: 100%;
+  }
   .input-events {
     display: flex;
     flex-direction: column;
@@ -652,12 +688,34 @@ input:checked + .slider:before {
   .sort {
     display: flex;
     justify-content: space-between;
-    gap: 8px;
+    /* gap: 8px; */
     align-items: center;
     width: 100%;
   }
-
+  .most-recent {
+    width: 50%;
+  }
   .chart-container {
     padding: 10px 5px 5px 10px;
   }
+
+  .search-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .ecclipse-export {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .export {
+    width: 40%;
+  }
+  /* .status {
+    width: 100%;
+  }
+  .name {
+    width: 100%;
+  } */
 }
