@@ -426,6 +426,7 @@ input:checked + .slider:before {
   border-radius: 2px 0px 0px 0px;
   border: 1px solid #e2e8f0;
   opacity: 0px;
+  cursor: pointer;
 }
 .history-data .data {
   color: #334155;
