@@ -435,6 +435,7 @@ input:checked + .slider:before {
   background: url('./assets/mainContentIcons/dropdown.svg') no-repeat right 20px
     center;
   outline: none;
+  color: #334155 !important;
 }
 .history-data-date {
   appearance: none; /* Remove default arrow */
@@ -452,6 +453,7 @@ input:checked + .slider:before {
   width: 88px;
   cursor: pointer;
   outline: none;
+  color: #334155 !important;
 }
 .history-data .data {
   color: #334155;
@@ -503,12 +505,37 @@ input:checked + .slider:before {
   width: 100px;
 }
 
+/* table  */
+
+#myTable {
+  width: 100%; /* Full-width */
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+#myTable tr.header {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f5f9;
+  width: 100%;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+tr.header th {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+  width: 100%;
+}
+
 .pagination-count {
   display: flex;
   align-items: center;
   justify-content: space-between;
   /* margin: 20px; */
-  /* margin-bottom: 160px; */
+  margin-top: 30px;
 }
 .pagination {
   display: flex;
@@ -747,16 +774,21 @@ input:checked + .slider:before {
   }
   .history-data-date {
     width: 100%;
-
-    text-align: center;
+    color: #334155 !important;
+    text-align: center !important;
     background: url('./assets/mainContentIcons/dropdown.svg') no-repeat right
       40% center;
   }
   .history-data {
-    text-align: center;
+    text-align: center !important;
     background: url('./assets/mainContentIcons/dropdown.svg') no-repeat right
       40% center;
+    color: #334155 !important;
   }
+  .hidden {
+    display: none;
+  }
+
   /* .status {
     width: 100%;
   }
