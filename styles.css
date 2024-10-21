@@ -773,6 +773,7 @@ tr.header th {
     width: 40%;
   }
   .history-data-date {
+    padding: none;
     width: 100%;
     color: #334155 !important;
     text-align: center !important;
@@ -780,6 +781,7 @@ tr.header th {
       40% center;
   }
   .history-data {
+    padding: none;
     text-align: center !important;
     background: url('./assets/mainContentIcons/dropdown.svg') no-repeat right
       40% center;
