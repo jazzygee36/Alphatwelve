@@ -68,7 +68,17 @@
             </label>
             <a href="#">Dark mode</a>
           </li>
-          <li><a href="#">Rura davis</a></li>
+
+          <li>
+            <div class="avatar">
+              <img src="./assets/sidebarIcons/avatar.svg" alt="User Avatar" />
+
+              <div class="avatar-text">
+                <a href="">Rura davis</a>
+                <p href="" class="user-email">rudra.devi@gmail.com</p>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
 
@@ -99,22 +109,22 @@
           <div class="overview-card">
             <div class="title-container">
               <h4 class="box-title">Total Events</h4>
-              <img src="./assets/mainContentIcons/information.svg" alt="" />
+              <img src="./assets/mainContentIcons/information.svg" alt="info" />
             </div>
             <div class="title-container">
               <h4 class="box-count">100,000</h4>
-              <img src="./assets/mainContentIcons/arrowup.svg" alt="" />
+              <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
               <h6>+5.0%</h6>
             </div>
           </div>
           <div class="overview-card">
             <div class="title-container">
               <h4 class="box-title">Active Speakers</h4>
-              <img src="./assets/mainContentIcons/information.svg" alt="" />
+              <img src="./assets/mainContentIcons/information.svg" alt="info" />
             </div>
             <div class="title-container">
               <h4 class="box-count">25</h4>
-              <img src="./assets/mainContentIcons/downArrorw.svg" alt="" />
+              <img src="./assets/mainContentIcons/downArrorw.svg" alt="arrow" />
               <h6 id="down">-5.0%</h6>
             </div>
           </div>
@@ -231,9 +241,8 @@
                     src="./assets/mainContentIcons/export.svg"
                     alt="export"
                   />
-                  <div>
-                    <h3>Export</h3>
-                  </div>
+
+                  <h4>Export</h4>
                 </div>
               </div>
             </div>
@@ -241,19 +250,16 @@
         </section>
 
         <!-- Table Content  -->
-        <table id="myTable">
-          <tr class="header">
-            <th>Event Name</th>
-            <th class="hidden">Date</th>
-            <th class="hidden">Speaker</th>
-            <th>Status</th>
-          </tr>
-          <!-- <tr>
-            <td>Cloud Innovation Summit</td>
-            <td>2024-10-15</td>
-            <td>Jane Doe</td>
-            <td>Complated</td>
-          </tr> -->
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th>Event Name</th>
+              <th>Date</th>
+              <th>Speaker</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
         </table>
 
         <section class="pagination-count">
@@ -266,8 +272,8 @@
           </div>
           <div class="show-row">
             <h3>Show:</h3>
-            <select name="" id="" class="row-selected">
-              <option value="">10 rows</option>
+            <select name="" id="" class="rows-number name">
+              <option value="date">10 rows</option>
             </select>
           </div>
         </section>

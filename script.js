@@ -140,6 +140,81 @@ const myBarChart = new Chart(ctx, {
 });
 
 //
+// Example array of objects
+const users = [
+  {
+    name: 'Cloud Innovation Summit',
+    date: '2024-10-15',
+    speaker: 'Jane Doe',
+    status: 'Completed',
+  },
+  {
+    name: 'Blockchain Revolution Conference',
+    date: '2024-11-15',
+    speaker: 'Dr. Peter Smith',
+    status: 'In Progress',
+  },
+  {
+    name: 'AI in Healthcare Symposium',
+    date: '2024-12-01',
+    speaker: 'Dr. Aisha Malik',
+    status: 'Completed',
+  },
+];
+
+// Get the table body element where rows will be added
+const tableBody = document.querySelector('#userTable tbody');
+
+// Function to map array and generate table rows
+function populateTable() {
+  users.forEach((user) => {
+    // Create a new row
+    const row = document.createElement('tr');
+
+    // Create a cell for each property
+    const nameCell = document.createElement('td');
+    nameCell.textContent = user.name;
+
+    const dateCell = document.createElement('td');
+    dateCell.textContent = user.date;
+
+    const speakerCell = document.createElement('td');
+    speakerCell.textContent = user.speaker;
+
+    const statusCell = document.createElement('td');
+    statusCell.textContent = user.status;
+
+    // Apply fixed width and other styles
+    statusCell.style.width = '99px'; // Fixed width
+    statusCell.style.height = '24px'; // Fixed height
+    // statusCell.style.textAlign = 'center'; // Center text
+    statusCell.style.padding = '5px 13px'; // Padding inside the cell
+
+    if (user.status === 'Completed') {
+      statusCell.style.color = '#10B981'; // Text color
+      statusCell.style.backgroundColor = '#D1FAE5'; // Background color
+      statusCell.style.borderRadius = '100px'; // Border radius
+
+      // statusCell.style.width = '99px';
+    } else if (user.status === 'In Progress') {
+      statusCell.style.color = '#3B82F6'; // Text color
+      statusCell.style.backgroundColor = '#DBEAFE'; // Background color
+      statusCell.style.borderRadius = '100px'; // Border radius
+    }
+
+    // Append the cells to the row
+    row.appendChild(nameCell);
+    row.appendChild(dateCell);
+    row.appendChild(speakerCell);
+    row.appendChild(statusCell);
+
+    // Append the row to the table body
+    tableBody.appendChild(row);
+  });
+}
+
+// Call the function to populate the table when the page loads
+populateTable();
 
 function createPagination() {
   const pageNumbers = document.getElementById('pageNumbers');

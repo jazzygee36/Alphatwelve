@@ -30,9 +30,8 @@ html {
   z-index: 10;
   background-color: #ffffff;
   padding-top: 16px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: none;
 }
 .top-logo {
   width: 64px;
@@ -77,14 +76,10 @@ html {
   gap: 16px;
   cursor: pointer;
   padding-left: 8px;
+  transition: background-color 0.3s ease;
 }
 .sidebar-menu li:hover {
-  gap: 16px;
-  border-radius: 2px 0px 0px 0px;
-  opacity: 0px;
   background-color: #fcf7ff;
-
-  height: 36px;
 }
 
 .sidebar-menu li:hover a {
@@ -97,6 +92,8 @@ html {
 .sidebar-menu a {
   color: #334155;
   text-decoration: none;
+  display: block; /* Make the anchor fill the li */
+  padding: 8px 0;
 }
 
 .notification-icon {
@@ -136,6 +133,19 @@ html {
   opacity: 0;
   width: 0;
   height: 0;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.user-email {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: #64748b;
 }
 
 /* The slider */
@@ -261,12 +271,16 @@ input:checked + .slider:before {
 .title-container h6 {
   font-family: Inter;
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 600 !important;
   line-height: 12px;
-  color: #10b981;
+  color: #10b981 !important;
 }
 #down {
-  color: #f43f5e;
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 600 !important;
+  line-height: 12px;
+  color: #f43f5e !important;
 }
 .box-title {
   font-family: Inter;
@@ -416,9 +430,8 @@ input:checked + .slider:before {
 .display-result {
   font-family: Inter;
   font-size: 14px;
-  font-weight: 600;
-  color: #334155;
-
+  font-weight: 600 !important;
+  color: #334155 !important;
   text-align: left;
 }
 .history-data {
@@ -481,9 +494,26 @@ input:checked + .slider:before {
 .name {
   width: 95px;
 }
+.rows-number {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 36px;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 2px 0px 0px 0px;
+  border: 1px solid #e2e8f0;
+  opacity: 0px;
+  cursor: pointer;
+  background: url('./assets/mainContentIcons/dropdown.svg') no-repeat right 10px
+    center;
+  outline: none;
+  color: #334155 !important;
+}
 .input-events {
   display: flex;
   /* justify-content: space-between; */
+  justify-content: left;
   gap: 8px;
   align-items: center;
   width: 100%;
@@ -507,12 +537,13 @@ input:checked + .slider:before {
 .sort h4 {
   font-family: Inter;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 400 !important;
   line-height: 20px;
 }
 
 .ecclipse-export {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 .most-recent {
@@ -529,36 +560,41 @@ input:checked + .slider:before {
   border: 1px solid #e2e8f0;
   opacity: 0px;
 }
-.export h3 {
+.events .export h4 {
   cursor: pointer;
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
+  color: #334155;
 }
 
 /* table  */
-
-#myTable {
-  width: 100%; /* Full-width */
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: left;
-}
-#myTable tr.header {
-  /* Add a grey background color to the table header and on hover */
-  background-color: #f1f5f9;
+table {
   width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th {
+  background-color: #f1f5f9; /* Light gray background for header */
+  padding: 16px;
+  text-align: left;
   font-family: Inter;
   font-size: 12px;
   font-weight: 600;
+  line-height: 16px;
+  text-align: left;
   color: #64748b;
 }
 
-tr.header th {
-  text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
-  width: 100%;
+td {
+  padding: 14px 14px 28px 14px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #334155;
 }
 
 .pagination-count {
@@ -829,7 +865,13 @@ tr.header th {
   .hidden {
     display: none;
   }
+  table {
+    display: none;
+  }
 
+  .show-row h3 {
+    display: none;
+  }
   /* .status {
     width: 100%;
   }
