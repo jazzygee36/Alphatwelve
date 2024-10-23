@@ -1282,6 +1282,9 @@ input:checked + .slider:before {
   .show-row h3 {
     display: none;
   }
+  .avatar-text {
+    display: none;
+  }
   /* .status {
     width: 100%;
   }
