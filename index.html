@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Alphatwelve</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -63,7 +67,7 @@
           </li>
           <li>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" id="darkModeToggle" />
               <span class="slider"></span>
             </label>
             <a href="#">Dark mode</a>
@@ -207,7 +211,10 @@
           <div class="events-history-data">
             <div class="input-events">
               <div class="search-container">
-                <img src="./assets//mainContentIcons/searchIcon.svg" alt="" />
+                <img
+                  src="./assets//mainContentIcons/searchIcon.svg"
+                  alt="search"
+                />
                 <input type="text" placeholder="Search..." />
               </div>
 
@@ -234,7 +241,10 @@
               </div>
               <div class="ecclipse-export">
                 <div class="ecclipse">
-                  <img src="./assets/mainContentIcons/ecclipse.svg" alt="dot" />
+                  <i
+                    class="fa fa-ellipsis-v"
+                    style="width: 0.83px; height: 9.17px"
+                  ></i>
                 </div>
                 <div class="export">
                   <img
@@ -259,7 +269,7 @@
               <th>Status</th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody class="open-modal-btn"></tbody>
         </table>
 
         <section class="pagination-count">
@@ -277,6 +287,27 @@
             </select>
           </div>
         </section>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="closeModalBtn">&times;</span>
+        <h1>Event Name</h1>
+        <p>Event Date</p>
+        <h2>Event Description</h2>
+        <h3>
+          3 Guest Speakers: Speaker name A, Speaker name B, Speaker name C.
+          <br />
+          300 Attendees
+        </h3>
+        <div class="group-btn">
+          <button class="btn btn-edit">Edit</button>
+          <div class="btn-two">
+            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-completed">Mark as completed</button>
+          </div>
+        </div>
       </div>
     </div>
 

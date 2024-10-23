@@ -8,6 +8,9 @@ const totalSlides = document.querySelectorAll('.slide').length;
 const ctx = document.getElementById('myBarChart').getContext('2d');
 const totalPages = 3; // Total number of pages
 let currentPage = 1;
+var modal = document.getElementById('myModal');
+var openBtn = document.querySelector('.open-modal-btn');
+var closeModalBtn = document.querySelector('.closeModalBtn');
 
 // Select the next and previous buttons
 const nextButton = document.querySelector('.next');
@@ -75,15 +78,6 @@ const myBarChart = new Chart(ctx, {
       {
         data: [700, 900, 750, 400, 1000, 750, 900, 350, 850, 650, 900, 600],
         backgroundColor: ' #8576FF',
-        // borderColor: [
-        //   'rgba(255, 99, 132, 1)',
-        //   'rgba(54, 162, 235, 1)',
-        //   'rgba(255, 206, 86, 1)',
-        //   'rgba(75, 192, 192, 1)',
-        //   'rgba(153, 102, 255, 1)',
-        //   'rgba(255, 159, 64, 1)',
-        // ],
-        // borderWidth: 1,
       },
     ],
   },
@@ -279,3 +273,39 @@ function myFunction() {
     }
   }
 }
+// Open modal when the button is clicked
+openBtn.addEventListener('click', function () {
+  modal.style.display = 'block';
+});
+
+// Close modal when the close button is clicked
+closeModalBtn.addEventListener('click', function () {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', function (event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  // Check if dark mode was previously set in localStorage
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    toggle.checked = true; // Set the toggle to checked
+  }
+
+  toggle.addEventListener('change', function () {
+    if (this.checked) {
+      body.classList.add('dark-mode');
+      localStorage.setItem('darkMode', 'enabled'); // Save to localStorage
+    } else {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('darkMode', 'disabled'); // Save to localStorage
+    }
+  });
+});
