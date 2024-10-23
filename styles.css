@@ -38,7 +38,7 @@ body.dark-mode {
   height: 100%;
   transition: transform 0.3s ease;
   border-right: 1px solid #f1f5f9;
-  /* z-index: 10; */
+  z-index: 2;
   background-color: #ffffff;
   padding-top: 16px;
   overflow-y: auto; /* Enable vertical scrolling */
@@ -982,7 +982,7 @@ body.dark-mode .group-btn {
   scrollbar-width: none;
   position: fixed;
   /* margin-top: 50%; */
-  z-index: 50px;
+  z-index: 5;
 }
 .bottom-menu {
   list-style: none;
@@ -993,7 +993,7 @@ body.dark-mode .group-btn {
   overflow-x: auto;
   scrollbar-width: none;
   margin-top: 50%;
-  z-index: 50px;
+  z-index: 5;
 }
 
 .bottom-menu li {
