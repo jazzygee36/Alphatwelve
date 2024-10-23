@@ -974,6 +974,111 @@ body.dark-mode .group-btn {
   border-radius: 2px;
 }
 
+.bottom-menu-bar {
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: fixed;
+  /* margin-top: 50%; */
+}
+.bottom-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-top: 50%;
+  z-index: 10;
+}
+
+.bottom-menu li {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 98px;
+  padding: 20px;
+  gap: 15px;
+}
+
+.bottom-menu li img {
+  margin-right: 10px;
+}
+
+.bottom-menu li a {
+  text-decoration: none;
+  color: #333;
+  flex-grow: 1;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.avatar img {
+  margin-right: 10px;
+}
+
+.avatar-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-email {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* @media screen and (max-width: 768px) {
+ 
+} */
+
 /* Responsive design */
 @media (max-width: 768px) {
   .sidebar {
@@ -1006,6 +1111,9 @@ body.dark-mode .group-btn {
   .header-bottom {
     border-bottom: none;
     padding-bottom: 16px;
+  }
+  .bottom-menu {
+    display: none;
   }
 }
 
@@ -1173,151 +1281,25 @@ body.dark-mode .group-btn {
   .name {
     width: 100%;
   } */
-}
-
-/* 
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-}
-
-.logo {
-  text-align: center;
-  padding: 20px;
-}
-
-.sidebar-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-menu li {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.sidebar-menu li img {
-  margin-right: 10px;
-}
-
-.sidebar-menu li a {
-  text-decoration: none;
-  color: #333;
-  flex-grow: 1;
-}
-
-.notification-icon {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-}
-
-.message-count {
-  background-color: red;
-  border-radius: 50%;
-  color: white;
-  padding: 2px 6px;
-  font-size: 12px;
-}
-
-.avatar {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.avatar img {
-  margin-right: 10px;
-}
-
-.avatar-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.user-email {
-  font-size: 0.8rem;
-  color: #666;
-}
-
-.switch {
-  display: inline-block;
-  position: relative;
-  width: 34px;
-  height: 20px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: '';
-  height: 16px;
-  width: 16px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(14px);
-}
-
-@media screen and (max-width: 768px) {
-  .sidebar {
+  .bottom-menu {
     position: fixed;
     bottom: 0;
+    z-index: 10;
+
     width: 100%;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     flex-direction: column-reverse;
     justify-content: flex-end;
   }
 
-  .logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-
-  .sidebar-menu {
+  .bottom-menu {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
   }
 
-  .sidebar-menu li {
+  .bottom-menu li {
     flex-grow: 1;
     text-align: center;
   }
-} */
+}

@@ -11,281 +11,356 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Sidebar -->
-      <nav class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-          <div class="top-logo">
-            <h5>Full Logo</h5>
-          </div>
-        </div>
-        <ul class="sidebar-menu">
-          <li>
-            <img src="./assets/sidebarIcons/home.svg" alt="home" class="img" />
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <img src="./assets/sidebarIcons/event.svg" alt="event" />
-
-            <a href="#">Events</a>
-          </li>
-          <li>
-            <img src="./assets/sidebarIcons/speaker.svg" alt="speaker" />
-
-            <a href="#">Skeakers</a>
-          </li>
-          <li>
-            <img src="./assets/sidebarIcons/report.svg" alt="report" />
-
-            <a href="#">Reports</a>
-          </li>
-          <li>
-            <div class="notification-icon">
-              <div class="notify">
-                <img src="./assets/sidebarIcons/bell.svg" alt="notify" />
-                <a href="#">Notifications</a>
-              </div>
-              <div class="message-count">
-                <span class="count">3</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <img src="./assets/sidebarIcons/chat.svg" alt="message" />
-
-            <a href="#">Messages</a>
-          </li>
-          <li>
-            <img src="./assets/sidebarIcons/settings.svg" alt="settings" />
-
-            <a href="#">Settings</a>
-          </li>
-          <li>
-            <img src="./assets/sidebarIcons/chevronLeft.svg" alt="collapse" />
-
-            <a href="#">Collapse</a>
-          </li>
-          <li>
-            <label class="switch">
-              <input type="checkbox" id="darkModeToggle" />
-              <span class="slider"></span>
-            </label>
-            <a href="#">Dark mode</a>
-          </li>
-
-          <li>
-            <div class="avatar">
-              <img src="./assets/sidebarIcons/avatar.svg" alt="User Avatar" />
-
-              <div class="avatar-text">
-                <a href="">Rura davis</a>
-                <p href="" class="user-email">rudra.devi@gmail.com</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Main content -->
-      <div class="main-content">
-        <!-- Header -->
-        <header class="header header-bottom">
-          <div class="main-top-logo top-logo">
-            <h5>Full Logo</h5>
-          </div>
-          <h1>Welcome! here’s your summary</h1>
-
-          <div>
-            <img
-              src="./assets/mainContentIcons/toggle.svg"
-              alt="toggle"
-              class="menu-toggle"
-              id="menu-toggle"
-            />
-          </div>
-        </header>
-
-        <!-- Content Area -->
-        <div class="content-top-header">
-          <h1>Welcome! here’s your summary</h1>
-        </div>
-        <div class="overview-container">
-          <div class="overview-card">
-            <div class="title-container">
-              <h4 class="box-title">Total Events</h4>
-              <img src="./assets/mainContentIcons/information.svg" alt="info" />
-            </div>
-            <div class="title-container">
-              <h4 class="box-count">100,000</h4>
-              <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
-              <h6>+5.0%</h6>
+    <div>
+      <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+          <div class="sidebar-header">
+            <div class="top-logo">
+              <h5>Full Logo</h5>
             </div>
           </div>
-          <div class="overview-card">
-            <div class="title-container">
-              <h4 class="box-title">Active Speakers</h4>
-              <img src="./assets/mainContentIcons/information.svg" alt="info" />
-            </div>
-            <div class="title-container">
-              <h4 class="box-count">25</h4>
-              <img src="./assets/mainContentIcons/downArrorw.svg" alt="arrow" />
-              <h6 id="down">-5.0%</h6>
-            </div>
-          </div>
-          <div class="overview-card">
-            <div class="title-container">
-              <h4 class="box-title">Total Registrations</h4>
-              <img src="./assets/mainContentIcons/information.svg" alt="info" />
-            </div>
-            <div class="title-container">
-              <h4 class="box-count">300,000</h4>
-              <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
-              <h6>+5.0%</h6>
-            </div>
-          </div>
-          <div class="overview-card">
-            <div class="title-container">
-              <h4 class="box-title">Total Revenue</h4>
-              <img src="./assets/mainContentIcons/information.svg" alt="info" />
-            </div>
-            <div class="title-container">
-              <h4 class="box-count">$500,000</h4>
-              <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
-              <h6>+5.0%</h6>
-            </div>
-          </div>
-        </div>
-        <section class="events">
-          <h3>Event Registrations per month</h3>
+          <ul class="sidebar-menu">
+            <li>
+              <img
+                src="./assets/sidebarIcons/home.svg"
+                alt="home"
+                class="img"
+              />
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/event.svg" alt="event" />
 
-          <div class="event-container">
-            <div class="chart-container">
-              <canvas id="myBarChart"></canvas>
-            </div>
-            <div class="carousel">
-              <div class="slides">
-                <div class="slide">
-                  <img src="./assets/carousel/Slide.svg" alt="Image 1" />
-                  <div class="text">
-                    <h6>Latest News & Updates</h6>
-                    <p>
-                      Turpis interdum nunc varius ornare dignissim pretium.
-                      Massa ornare quis aliquet sed vitae. Sed velit nisi,
-                      fermentum erat. Fringilla purus, erat fringilla tincidunt
-                      quisque non. Pellentesque in ut tellus.
-                    </p>
-                  </div>
+              <a href="#">Events</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/speaker.svg" alt="speaker" />
+
+              <a href="#">Skeakers</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/report.svg" alt="report" />
+
+              <a href="#">Reports</a>
+            </li>
+            <li>
+              <div class="notification-icon">
+                <div class="notify">
+                  <img src="./assets/sidebarIcons/bell.svg" alt="notify" />
+                  <a href="#">Notifications</a>
                 </div>
-                <div class="slide">
-                  <img src="./assets/carousel/Slide.svg" alt="Image 2" />
-                  <div class="text">
-                    <h6>Latest News & Updates</h6>
-                    <p>
-                      Turpis interdum nunc varius ornare dignissim pretium.
-                      Massa ornare quis aliquet sed vitae. Sed velit nisi,
-                      fermentum erat. Fringilla purus, erat fringilla tincidunt
-                      quisque non. Pellentesque in ut tellus.
-                    </p>
-                  </div>
-                </div>
-                <div class="slide">
-                  <img src="./assets/carousel/Slide.svg" alt="Image 3" />
-                  <div class="text">
-                    <h6>Latest News & Updates</h6>
-                    <p>
-                      Turpis interdum nunc varius ornare dignissim pretium.
-                      Massa ornare quis aliquet sed vitae. Sed velit nisi,
-                      fermentum erat. Fringilla purus, erat fringilla tincidunt
-                      quisque non. Pellentesque in ut tellus.
-                    </p>
-                  </div>
+                <div class="message-count">
+                  <span class="count">3</span>
                 </div>
               </div>
-              <button class="prev" onclick="prevSlide()">&#10094;</button>
-              <button class="next" onclick="nextSlide()">&#10095;</button>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/chat.svg" alt="message" />
+
+              <a href="#">Messages</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/settings.svg" alt="settings" />
+
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/chevronLeft.svg" alt="collapse" />
+
+              <a href="#">Collapse</a>
+            </li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="slider"></span>
+              </label>
+              <a href="#">Dark mode</a>
+            </li>
+
+            <li>
+              <div class="avatar">
+                <img src="./assets/sidebarIcons/avatar.svg" alt="User Avatar" />
+
+                <div class="avatar-text">
+                  <a href="">Rura davis</a>
+                  <p href="" class="user-email">rudra.devi@gmail.com</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Main content -->
+        <div class="main-content">
+          <!-- Header -->
+          <header class="header header-bottom">
+            <div class="main-top-logo top-logo">
+              <h5>Full Logo</h5>
             </div>
+            <h1>Welcome! here’s your summary</h1>
+
+            <div>
+              <img
+                src="./assets/mainContentIcons/toggle.svg"
+                alt="toggle"
+                class="menu-toggle"
+                id="menu-toggle"
+              />
+            </div>
+          </header>
+
+          <!-- Content Area -->
+          <div class="content-top-header">
+            <h1>Welcome! here’s your summary</h1>
           </div>
-        </section>
-        <section class="events">
-          <h3>Event History</h3>
-          <div class="events-history-data">
-            <div class="input-events">
-              <div class="search-container">
+          <div class="overview-container">
+            <div class="overview-card">
+              <div class="title-container">
+                <h4 class="box-title">Total Events</h4>
                 <img
-                  src="./assets//mainContentIcons/searchIcon.svg"
-                  alt="search"
+                  src="./assets/mainContentIcons/information.svg"
+                  alt="info"
                 />
-                <input type="text" placeholder="Search..." />
               </div>
-
-              <select name="" id="" class="history-data-date">
-                <option value="date" class="date">Date</option>
-              </select>
-              <select name="" id="" class="history-data status">
-                <option value="date">Status</option>
-              </select>
-              <select name="" id="" class="history-data name">
-                <option value="date">Name</option>
-              </select>
-              <div class="display-result">Displaying 100 results</div>
+              <div class="title-container">
+                <h4 class="box-count">100,000</h4>
+                <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
+                <h6>+5.0%</h6>
+              </div>
             </div>
-
-            <div class="recent">
-              <div class="sort">
-                <div>
-                  <h4>Sort:</h4>
-                </div>
-                <select name="" id="" class="history-data-recent most-recent">
-                  <option value="date">Most Recent</option>
-                </select>
+            <div class="overview-card">
+              <div class="title-container">
+                <h4 class="box-title">Active Speakers</h4>
+                <img
+                  src="./assets/mainContentIcons/information.svg"
+                  alt="info"
+                />
               </div>
-              <div class="ecclipse-export">
-                <div class="ecclipse">
-                  <i
-                    class="fa fa-ellipsis-v"
-                    style="width: 0.83px; height: 9.17px"
-                  ></i>
+              <div class="title-container">
+                <h4 class="box-count">25</h4>
+                <img
+                  src="./assets/mainContentIcons/downArrorw.svg"
+                  alt="arrow"
+                />
+                <h6 id="down">-5.0%</h6>
+              </div>
+            </div>
+            <div class="overview-card">
+              <div class="title-container">
+                <h4 class="box-title">Total Registrations</h4>
+                <img
+                  src="./assets/mainContentIcons/information.svg"
+                  alt="info"
+                />
+              </div>
+              <div class="title-container">
+                <h4 class="box-count">300,000</h4>
+                <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
+                <h6>+5.0%</h6>
+              </div>
+            </div>
+            <div class="overview-card">
+              <div class="title-container">
+                <h4 class="box-title">Total Revenue</h4>
+                <img
+                  src="./assets/mainContentIcons/information.svg"
+                  alt="info"
+                />
+              </div>
+              <div class="title-container">
+                <h4 class="box-count">$500,000</h4>
+                <img src="./assets/mainContentIcons/arrowup.svg" alt="arrow" />
+                <h6>+5.0%</h6>
+              </div>
+            </div>
+          </div>
+          <section class="events">
+            <h3>Event Registrations per month</h3>
+
+            <div class="event-container">
+              <div class="chart-container">
+                <canvas id="myBarChart"></canvas>
+              </div>
+              <div class="carousel">
+                <div class="slides">
+                  <div class="slide">
+                    <img src="./assets/carousel/Slide.svg" alt="Image 1" />
+                    <div class="text">
+                      <h6>Latest News & Updates</h6>
+                      <p>
+                        Turpis interdum nunc varius ornare dignissim pretium.
+                        Massa ornare quis aliquet sed vitae. Sed velit nisi,
+                        fermentum erat. Fringilla purus, erat fringilla
+                        tincidunt quisque non. Pellentesque in ut tellus.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="./assets/carousel/Slide.svg" alt="Image 2" />
+                    <div class="text">
+                      <h6>Latest News & Updates</h6>
+                      <p>
+                        Turpis interdum nunc varius ornare dignissim pretium.
+                        Massa ornare quis aliquet sed vitae. Sed velit nisi,
+                        fermentum erat. Fringilla purus, erat fringilla
+                        tincidunt quisque non. Pellentesque in ut tellus.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <img src="./assets/carousel/Slide.svg" alt="Image 3" />
+                    <div class="text">
+                      <h6>Latest News & Updates</h6>
+                      <p>
+                        Turpis interdum nunc varius ornare dignissim pretium.
+                        Massa ornare quis aliquet sed vitae. Sed velit nisi,
+                        fermentum erat. Fringilla purus, erat fringilla
+                        tincidunt quisque non. Pellentesque in ut tellus.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="export">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+              </div>
+            </div>
+          </section>
+          <section class="events">
+            <h3>Event History</h3>
+            <div class="events-history-data">
+              <div class="input-events">
+                <div class="search-container">
                   <img
-                    src="./assets/mainContentIcons/export.svg"
-                    alt="export"
+                    src="./assets//mainContentIcons/searchIcon.svg"
+                    alt="search"
                   />
+                  <input type="text" placeholder="Search..." />
+                </div>
 
-                  <h4>Export</h4>
+                <select name="" id="" class="history-data-date">
+                  <option value="date" class="date">Date</option>
+                </select>
+                <select name="" id="" class="history-data status">
+                  <option value="date">Status</option>
+                </select>
+                <select name="" id="" class="history-data name">
+                  <option value="date">Name</option>
+                </select>
+                <div class="display-result">Displaying 100 results</div>
+              </div>
+
+              <div class="recent">
+                <div class="sort">
+                  <div>
+                    <h4>Sort:</h4>
+                  </div>
+                  <select name="" id="" class="history-data-recent most-recent">
+                    <option value="date">Most Recent</option>
+                  </select>
+                </div>
+                <div class="ecclipse-export">
+                  <div class="ecclipse">
+                    <i
+                      class="fa fa-ellipsis-v"
+                      style="width: 0.83px; height: 9.17px"
+                    ></i>
+                  </div>
+                  <div class="export">
+                    <img
+                      src="./assets/mainContentIcons/export.svg"
+                      alt="export"
+                    />
+
+                    <h4>Export</h4>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Table Content  -->
-        <table id="userTable">
-          <thead>
-            <tr>
-              <th>Event Name</th>
-              <th>Date</th>
-              <th>Speaker</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody class="open-modal-btn"></tbody>
-        </table>
+          <!-- Table Content  -->
+          <table id="userTable">
+            <thead>
+              <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Speaker</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody class="open-modal-btn"></tbody>
+          </table>
 
-        <section class="pagination-count">
-          <div class="pagination">
-            <button id="prevBtn" class="arrow-btn">←</button>
-            <div id="pageNumbers" class="page-numbers">
-              <!-- Page numbers will be generated here by JavaScript -->
+          <section class="pagination-count">
+            <div class="pagination">
+              <button id="prevBtn" class="arrow-btn">←</button>
+              <div id="pageNumbers" class="page-numbers">
+                <!-- Page numbers will be generated here by JavaScript -->
+              </div>
+              <button id="nextBtn" class="arrow-btn">→</button>
             </div>
-            <button id="nextBtn" class="arrow-btn">→</button>
-          </div>
-          <div class="show-row">
-            <h3>Show:</h3>
-            <select name="" id="" class="rows-number name">
-              <option value="date">10 rows</option>
-            </select>
-          </div>
+            <div class="show-row">
+              <h3>Show:</h3>
+              <select name="" id="" class="rows-number name">
+                <option value="date">10 rows</option>
+              </select>
+            </div>
+          </section>
+        </div>
+
+        <section class="bottom-menu-bar">
+          <ul class="bottom-menu">
+            <li>
+              <img
+                src="./assets/sidebarIcons/home.svg"
+                alt="home"
+                class="img"
+              />
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/event.svg" alt="event" />
+
+              <a href="#">Events</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/speaker.svg" alt="speaker" />
+
+              <a href="#">Skeakers</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/report.svg" alt="report" />
+
+              <a href="#">Reports</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/bell.svg" alt="notify" />
+              <a href="#">Notifications</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/chat.svg" alt="message" />
+
+              <a href="#">Messages</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/settings.svg" alt="settings" />
+
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <img src="./assets/sidebarIcons/chevronLeft.svg" alt="collapse" />
+
+              <a href="#">Collapse</a>
+            </li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="slider"></span>
+              </label>
+              <a href="#">Dark mode</a>
+            </li>
+          </ul>
         </section>
       </div>
     </div>
