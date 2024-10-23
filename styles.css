@@ -46,6 +46,7 @@ body.dark-mode {
 body.dark-mode .sidebar {
   background-color: #484554;
   color: #ffffff;
+  border-right: 1px solid #484554;
 }
 
 .sidebar .dark-mode {
@@ -152,6 +153,7 @@ body.dark-mode .sidebar-menu a {
   display: inline-block;
   width: 24px;
   height: 16px;
+  background-color: transparent;
 }
 
 /* Hide the default checkbox */
@@ -844,35 +846,62 @@ body.dark-mode .modal-content p {
   color: #ffffff;
 }
 
-.modal-content h2,
-h3 {
+.modal-content h2 {
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #334155;
+  color: #334155 !important;
   margin-top: 24px;
   margin-left: 24px;
   margin-right: 24px;
 }
-body.dark-mode .modal-content h2,
-h3 {
-  color: #ffffff;
+body.dark-mode .modal-content h2 {
+  color: #ffffff !important;
 }
 
 .modal-content h3 {
-  margin-top: 24px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #334155 !important;
+  /* margin-top: 24px; */
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 16px;
+}
+
+body.dark-mode .modal-content h3 {
+  color: #ffffff !important;
 }
 
 /* Close button */
-.closeModalBtn {
-  color: #aaa;
+.closeModalBtn-box {
+  border: 1px solid #e2e8f0;
+  /* padding: 4px; */
+  border-radius: 100%;
+  position: relative;
   float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
   margin-right: 24px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent !important;
+}
+body.dark-mode .closeModalBtn-box {
+  background-color: #484554 !important;
+}
+.closeModalBtn {
+  /* float: right; */
+  /* border: 1.5px solid #334155; */
+  cursor: pointer;
+  width: 5.25px;
+  height: 5.25px;
+  padding: 4px;
 }
 
 .closeModalBtn:hover,
@@ -1145,3 +1174,150 @@ body.dark-mode .group-btn {
     width: 100%;
   } */
 }
+
+/* 
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.logo {
+  text-align: center;
+  padding: 20px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.sidebar-menu li img {
+  margin-right: 10px;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: #333;
+  flex-grow: 1;
+}
+
+.notification-icon {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.message-count {
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.avatar img {
+  margin-right: 10px;
+}
+
+.avatar-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-email {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .sidebar-menu li {
+    flex-grow: 1;
+    text-align: center;
+  }
+} */
