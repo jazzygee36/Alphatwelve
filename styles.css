@@ -88,7 +88,9 @@ body.dark-mode .sidebar {
   margin-top: 24px;
   padding: 0px 8px 8px 8px;
 }
-
+/* body.dark-mode .sidebar-icons path {
+  stroke: #8576ff;
+} */
 .sidebar-menu li {
   margin: 24px 0;
   font-size: 14px;
@@ -103,13 +105,27 @@ body.dark-mode .sidebar {
 }
 .sidebar-menu li:hover {
   background-color: #fcf7ff;
+  color: #8576ff;
+}
+
+.sidebar-menu li:hover .sidebar-icons path {
+  stroke: #8576ff; /* Change stroke color on hover */
+}
+body.dark-mode .sidebar-menu li:hover .sidebar-icons path {
+  stroke: #ffffff; /* Change stroke color on hover */
+}
+/* li:hover .sidebar-icons:hover path {
+  stroke: #8576ff;
+} */
+body.dark-mode .sidebar-menu li:hover {
+  background-color: #8576ff;
 }
 
 .sidebar-menu li:hover a {
   color: #8576ff;
 }
 body.dark-mode .sidebar-menu li:hover a {
-  color: #000000;
+  color: #fcf7ff;
 }
 
 .sidebar-menu li:hover img {
@@ -482,10 +498,13 @@ body.dark-mode .search-container input {
   color: #334155 !important;
   /* text-align: left !important; */
 }
+body.dark-mode .display-result {
+  color: #ffffff !important;
+}
 .display-result-mobile {
   -webkit-font-smoothing: antialiased;
   position: relative;
-  right: 110px;
+  right: 28%;
   /* left: 0; */
   font-family: Inter;
   font-size: 14px;
@@ -493,9 +512,10 @@ body.dark-mode .search-container input {
   color: #334155 !important;
   /* text-align: left !important; */
 }
-body.dark-mode .display-result {
+body.dark-mode .display-result-mobile {
   color: #ffffff !important;
 }
+
 .history-data {
   appearance: none; /* Remove default arrow */
   -webkit-appearance: none;
@@ -547,28 +567,51 @@ body.dark-mode .history-data-date {
   background-color: #484554;
   color: #ffffff !important;
 }
-
-.history-data-recent {
-  appearance: none; /* Remove default arrow */
-  -webkit-appearance: none;
-  -moz-appearance: none;
+.recent-border {
+  display: flex;
+  align-items: center;
   height: 36px;
-  padding: 8px 16px;
+  padding: 8px 8px;
   gap: 8px;
   border-radius: 2px 0px 0px 0px;
   border: 1px solid #e2e8f0;
   opacity: 0px;
   cursor: pointer;
-  background: url('./assets/mainContentIcons/dropdown.svg') no-repeat right 20px
-    center;
+  outline: none;
+}
+
+.history-data-recent {
+  appearance: none; /* Removes default arrow in most browsers */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+  background: transparent;
+  border: none;
+  cursor: pointer;
   outline: none;
   color: #334155 !important;
 }
 
-body.dark-mode .history-data-recent {
+body.dark-mode .recent-border {
   border: none;
   background-color: #484554;
   color: #ffffff !important;
+}
+body.dark-mode .history-data-recent {
+  color: #ffffff !important;
+}
+.custom-arrow {
+  pointer-events: none; /* Makes sure the arrow doesn't interfere with clicking the select */
+  position: relative;
+  /* top: 50%;
+  right: 10px; */
+  transform: translateY(-50%);
+}
+body.dark-mode .arrow-border path {
+  stroke: #fcf7ff;
+}
+
+select.history-data-recent {
+  position: relative; /* Make sure the SVG can be positioned within the select */
 }
 .history-data .data {
   color: #334155;
@@ -635,9 +678,9 @@ body.dark-mode .rows-number {
   align-items: center;
   gap: 8px;
 }
-.most-recent {
+/* .most-recent {
   width: 139px;
-}
+} */
 .export {
   display: flex;
   align-items: center;
@@ -653,6 +696,9 @@ body.dark-mode .export {
   border: none;
   background-color: #484554;
   color: #ffffff !important;
+}
+body.dark-mode .content-icons path {
+  stroke: #fcf7ff;
 }
 .events .export h4 {
   cursor: pointer;
@@ -733,6 +779,9 @@ body.dark-mode .mobile-table-header {
   justify-content: center;
   gap: 16px;
   margin-bottom: 60px;
+}
+body.dark-mode .pagination-arrow path {
+  stroke: #8576ff;
 }
 
 .arrow-btn {
