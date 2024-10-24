@@ -1,6 +1,7 @@
 /* General resets */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -474,9 +475,18 @@ body.dark-mode .search-container input {
   color: #999;
 }
 .display-result {
+  /* left: 0; */
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  /* text-align: left !important; */
+}
+.display-result-mobile {
+  -webkit-font-smoothing: antialiased;
   position: relative;
-  right: 0;
-  left: 0;
+  right: 110px;
+  /* left: 0; */
   font-family: Inter;
   font-size: 14px;
   font-weight: 600 !important;
@@ -1232,6 +1242,9 @@ body.dark-mode .accordion-speaker .speaker {
   .mobile-table-header {
     display: none;
   }
+  .display-result-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1458,8 +1471,9 @@ body.dark-mode .accordion-speaker .speaker {
     width: 100%;
   }
   .display-result {
-    position: relative;
-    right: 110px;
+    display: none;
+    /* position: relative;
+    right: 110px; */
     /* font-family: Inter;
     font-size: 14px;
     font-weight: 600 !important;
