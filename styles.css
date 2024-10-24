@@ -1418,9 +1418,7 @@ body.dark-mode .accordion-speaker .speaker {
     justify-content: space-between;
     width: 100%;
   }
-  .export {
-    width: 35%;
-  }
+
   .history-data-date {
     padding: 2px 45% !important;
     width: 100%;
@@ -1437,10 +1435,7 @@ body.dark-mode .accordion-speaker .speaker {
     color: #334155 !important;
   }
   .history-data-recent {
-    padding: 8px 12% !important;
-
-    background: url('./assets/mainContentIcons/dropdown.svg') no-repeat right
-      35px center;
+    width: 100% !important;
     outline: none;
     color: #334155 !important;
   }
