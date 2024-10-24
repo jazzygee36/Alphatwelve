@@ -309,3 +309,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Function to toggle the accordion
+function toggleAccordion(element) {
+  // Get the content section of the clicked accordion
+  const content = element.nextElementSibling;
+
+  // Toggle the active class on the header for arrow rotation
+  element.classList.toggle('active');
+
+  // Toggle the visibility of the content section
+  if (content.style.display === 'block') {
+    content.style.display = 'none';
+  } else {
+    content.style.display = 'block';
+  }
+}
