@@ -1103,6 +1103,9 @@ body.dark-mode .btn-completed {
   height: 98px;
   padding: 20px;
   gap: 15px;
+  /* border-top: 1px solid red !important; */
+  /* background-color: red !important; */
+  z-index: 20;
 }
 
 .bottom-menu li img {
@@ -1510,6 +1513,9 @@ body.dark-mode .accordion-speaker .speaker {
   .bottom-menu li {
     flex-grow: 1;
     text-align: center;
+  }
+  .border-list.active {
+    border-top: 1px solid #2563eb !important;
   }
   .group-btn {
     display: flex;
