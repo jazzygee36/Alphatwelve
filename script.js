@@ -57,23 +57,42 @@ setInterval(() => {
   nextSlide();
 }, 3000); // Slide every 3 seconds
 
-const myBarChart = new Chart(ctx, {
-  type: 'bar', // Define the chart type as 'bar'
+// const ctx = document.getElementById('myBarChart').getContext('2d');
+
+// Truncate each month label to the first two letters
+
+const fullLabels = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+const truncatedLabels = fullLabels.map((label) => label.slice(0, 2));
+
+function isMobile() {
+  return window.innerWidth <= 768; // Adjust the width as needed for your mobile breakpoint
+}
+
+// Function to get the chart text color from CSS
+function getChartTextColor() {
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue('--chart-text-color')
+    .trim();
+}
+
+// Create the chart with initial options
+let myBarChart = new Chart(ctx, {
+  type: 'bar',
   data: {
-    labels: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
-    ], // X-axis labels
+    labels: isMobile() ? truncatedLabels : fullLabels, // Use truncated labels on mobile
     datasets: [
       {
         data: [700, 900, 750, 400, 1000, 750, 900, 350, 850, 650, 900, 600],
@@ -85,31 +104,28 @@ const myBarChart = new Chart(ctx, {
     scales: {
       x: {
         grid: {
-          display: false, // Remove grid lines from the X-axis
+          display: false,
         },
         ticks: {
-          autoSkip: false, // Ensures that all X-axis labels are shown
-          color: '#64748B',
+          color: getChartTextColor(),
           font: {
-            size: 10, // Change the font size of the X-axis labels
-            weight: 400, // Make the X-axis labels bold
+            size: 10,
+            weight: '400',
           },
         },
       },
       y: {
-        beginAtZero: true, // Ensures the Y-axis starts at 0
+        beginAtZero: true,
         grid: {
-          display: false, // Remove grid lines from the X-axis
+          display: false,
         },
         ticks: {
-          color: '#64748B',
+          color: getChartTextColor(),
           font: {
-            size: 10, // Change the font size of the X-axis labels
-            weight: 400, // Make the X-axis labels bold
+            size: 10,
+            weight: '400',
           },
-          // Define the specific values you want to show on the Y-axis
           callback: function (value) {
-            // Only display these specific Y-axis values (for example: 0, 500, 1000)
             if (
               value === 0 ||
               value === 200 ||
@@ -120,18 +136,28 @@ const myBarChart = new Chart(ctx, {
             ) {
               return value;
             }
-            return null; // Hide other values
+            return null;
           },
         },
       },
     },
     plugins: {
       legend: {
-        display: false, // Hides the label (legend) from being displayed
+        display: false,
       },
     },
   },
 });
+
+// Function to update chart colors and labels
+function updateChart() {
+  myBarChart.options.scales.x.ticks.color = getChartTextColor();
+  myBarChart.data.labels = isMobile() ? truncatedLabels : fullLabels;
+  myBarChart.update();
+}
+
+// Update chart on window resize to dynamically adjust labels
+window.addEventListener('resize', updateChart);
 
 function createPagination() {
   const pageNumbers = document.getElementById('pageNumbers');

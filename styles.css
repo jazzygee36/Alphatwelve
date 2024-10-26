@@ -8,6 +8,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --chart-text-color: #64748b;
+}
+body.dark-mode:root {
+  --chart-text-color: #ffffff;
+}
 
 body,
 html {
@@ -286,6 +292,9 @@ body.dark-mode .header h1 {
   gap: 12px;
   width: 100%;
 }
+body.dark-mode .overview-icon path {
+  stroke: #ffffff;
+}
 .overview-card {
   width: 100%;
   border: 1px solid #f2f2f7;
@@ -490,6 +499,11 @@ body.dark-mode .chart-container {
 body.dark-mode .search-container input {
   border: none;
   background-color: #484554;
+}
+input,
+textarea,
+select {
+  font-size: 16px; /* Prevent zoom on focus */
 }
 
 .search-container input::placeholder {
@@ -1372,14 +1386,14 @@ body.dark-mode .accordion-speaker .speaker {
   .text {
     position: absolute;
     bottom: -15px;
-    left: 46%;
+    left: 48%;
     transform: translateX(-50%);
     /* background-color: rgba(0, 0, 0, 0.5); */
     color: white;
     padding: 20px;
     font-size: 12px;
     /* text-align: center; */
-    width: 94%;
+    width: 100%;
     border-radius: 5px;
     line-height: 16px;
   }
@@ -1515,7 +1529,10 @@ body.dark-mode .accordion-speaker .speaker {
     text-align: center;
   }
   .border-list.active {
-    border-top: 1px solid #2563eb !important;
+    border-top: 2px solid #8576ff !important;
+  }
+  .list-text.active {
+    color: #8576ff !important;
   }
   .group-btn {
     display: flex;
