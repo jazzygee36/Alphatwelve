@@ -503,12 +503,12 @@ body.dark-mode .search-container input {
 input,
 textarea,
 select {
-  font-size: 16px; /* Prevent zoom on focus */
+  font-size: 14px; /* Prevent zoom on focus */
 }
 body.dark-mode input,
 textarea,
 select {
-  font-size: 16px; /* Prevent zoom on focus */
+  font-size: 14px; /* Prevent zoom on focus */
   color: #ffffff;
 }
 
